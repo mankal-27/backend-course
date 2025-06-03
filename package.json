@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node module-1-fundamentals/app.js",
+    "dev": "nodemon module-1-fundamentals/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/mankal-27/backend-course/issues"
   },
-  "homepage": "https://github.com/mankal-27/backend-course#readme"
+  "homepage": "https://github.com/mankal-27/backend-course#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "nodemon": "^3.1.10"
+  }
 }
