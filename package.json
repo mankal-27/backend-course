@@ -21,6 +21,7 @@
   "homepage": "https://github.com/mankal-27/backend-course#readme",
   "dependencies": {
     "axios": "^1.9.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "path": "^0.12.7"
   }
 }
