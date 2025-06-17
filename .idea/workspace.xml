@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0df47672-d17b-4035-a7ee-b42af12c8fbe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/module-1-fundamentals/http-server-demo/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express-router-demo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express-router-demo/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express-router-demo/routes/books.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +37,9 @@
     &quot;accountId&quot;: &quot;f7204d99-d2c3-432e-8ec6-d315cd407672&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/express-middleware-demo/public/index.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -43,25 +48,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/memoub/Desktop/CourseUd/Striver",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/home/memoub/.config/JetBrains/WebStorm2025.1/node/versions/22.16.0/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "/home/memoub/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/memoub/Desktop/CourseUd/backend-course/express-router-demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/home/memoub/.config/JetBrains/WebStorm2025.1/node/versions/22.16.0/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/memoub/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/express-router-demo" />
+      <recent name="$PROJECT_DIR$/express-middleware-demo" />
+      <recent name="$PROJECT_DIR$/express-routing-demo" />
+      <recent name="$PROJECT_DIR$/express-intro-demo" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +92,11 @@
       <workItem from="1748935755352" duration="17000" />
       <workItem from="1748935784929" duration="5014000" />
       <workItem from="1749471235543" duration="65000" />
-      <workItem from="1750054952917" duration="7073000" />
+      <workItem from="1750054952917" duration="7902000" />
+      <workItem from="1750135200534" duration="33000" />
+      <workItem from="1750135247077" duration="3251000" />
+      <workItem from="1750155758573" duration="3937000" />
+      <workItem from="1750162931017" duration="302000" />
     </task>
     <servers />
   </component>
