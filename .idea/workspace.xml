@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0df47672-d17b-4035-a7ee-b42af12c8fbe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/express-router-demo/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express-router-demo/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express-router-demo/routes/books.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module-3-mongodb/express-mongoose-demo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module-3-mongodb/express-mongoose-demo/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module-3-mongodb/express-mongoose-demo/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,31 +48,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/memoub/Desktop/CourseUd/backend-course/express-router-demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/home/memoub/.config/JetBrains/WebStorm2025.1/node/versions/22.16.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/memoub/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/memoub/Desktop/CourseUd/backend-course/module-3-mongodb/express-mongoose-demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/home/memoub/.config/JetBrains/WebStorm2025.1/node/versions/22.16.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/home/memoub/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/module-3-mongodb/express-mongoose-demo" />
       <recent name="$PROJECT_DIR$/express-router-demo" />
       <recent name="$PROJECT_DIR$/express-middleware-demo" />
       <recent name="$PROJECT_DIR$/express-routing-demo" />
       <recent name="$PROJECT_DIR$/express-intro-demo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/module-2-expressjs" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -97,6 +101,7 @@
       <workItem from="1750135247077" duration="3251000" />
       <workItem from="1750155758573" duration="3937000" />
       <workItem from="1750162931017" duration="302000" />
+      <workItem from="1750224490399" duration="3211000" />
     </task>
     <servers />
   </component>
