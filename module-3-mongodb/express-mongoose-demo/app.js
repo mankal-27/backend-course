@@ -1,7 +1,8 @@
 // app.js
+//require('express-async-errors');// Must be at the very top to catch async errors automatically
 const express = require('express');
 const connectDB = require('./db'); // Import the database connection function
-const Product = require('./models/Product'); // Import the Product Model
+const productRoutes = require('./routes/productRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,114 +10,46 @@ const PORT = process.env.PORT || 3000;
 // Connect to MongoDB
 connectDB();
 
-// --- Mongoose CRUD Operations Example (for testing purposes) ---
-async function runCrudOperations() {
-    console.log('\n--- Starting Mongoose CRUD Operations ---');
-    
-    try {
-        // --- C: Create Product ---
-        console.log('\nCreating products...');
-        const product1 = await Product.create({
-            name: 'Laptop X',
-            description: 'Powerful laptop for professionals.',
-            price: 1200.00,
-            category: 'Electronics',
-            stockQuantity: 50
-        });
-        console.log('Created:', product1.name);
-        
-        const product2 = new Product({
-            name: 'Node.js Basics Book',
-            price: 25.50,
-            category: 'Books',
-            stockQuantity: 100
-        });
-        await product2.save();
-        console.log('Created:', product2.name);
-        
-        // Attempt to create a product with missing required field
-        try {
-            await Product.create({ name: 'Invalid Product' }); // Missing price, category
-        } catch (validationError) {
-            console.error('\nValidation Error (expected):', validationError.message);
-        }
-        
-        // Attempt to create a product with a duplicate unique field
-        try {
-            await Product.create({
-                name: 'Laptop X', // Duplicate name
-                price: 1300.00,
-                category: 'Electronics',
-                stockQuantity: 10
-            });
-        } catch (duplicateError) {
-            console.error('\nDuplicate Key Error (expected):', duplicateError.message);
-        }
-        
-        
-        // --- R: Read Products ---
-        console.log('\nReading products...');
-        const allProducts = await Product.find({});
-        console.log('All Products (count):', allProducts.length);
-        // console.log(allProducts); // Uncomment to see full product objects
-        
-        const laptop = await Product.findOne({ name: 'Laptop X' });
-        console.log('Found Laptop X:', laptop ? laptop.name : 'Not found');
-        
-        const booksCategory = await Product.find({ category: 'Books' }).limit(1).select('name price'); // Select only name and price
-        console.log('One product from Books category (name, price):', booksCategory);
-        
-        
-        // --- U: Update Product ---
-        console.log('\nUpdating products...');
-        if (laptop) {
-            const updatedLaptop = await Product.findByIdAndUpdate(
-                laptop._id,
-                { price: 1150.00, stockQuantity: 45 },
-                { new: true, runValidators: true } // Return updated document, run schema validators
-            );
-            console.log('Updated Laptop X price/stock:', updatedLaptop.price, updatedLaptop.stockQuantity);
-        }
-        
-        // --- D: Delete Product ---
-        console.log('\nDeleting products...');
-        const deleteResult = await Product.deleteOne({ name: 'Node.js Basics Book' });
-        console.log('Deleted Node.js Basics Book (deletedCount):', deleteResult.deletedCount);
-        
-        // Verify deletion
-        const remainingProducts = await Product.find({});
-        console.log('Remaining Products (count):', remainingProducts.length);
-        
-    } catch (err) {
-        console.error('\n--- Unexpected Error During CRUD Operations ---');
-        console.error(err.message);
-        // In a real app, you might want to stop the server or log to a file here
-    } finally {
-        console.log('\n--- Finished Mongoose CRUD Operations ---');
-        // For testing, you might want to exit the process here
-        // process.exit(0);
-    }
-}
+//Global Middleware
+app.use(express.json());
 
-// Call the CRUD operations after DB connection is attempted
-connectDB().then(() => {
-    runCrudOperations();
-});
+//Mount Product Routes
+// All routes in productRoutes will be prefixed with '/api/products
+app.use('/api/products', productRoutes);
 
-
-// Basic Express setup (keep for server functionality)
-app.use(express.json()); // For future API routes
-
+//Root path for testing server status
 app.get('/', (req, res) => {
-    res.send('Server is running. Check terminal for Mongoose CRUD operation logs!');
+    res.send('Welcome to the product API!')
+})
+
+// 404 Not Found Middleware - handles requests to undefined routes
+app.use((req, res, next) => {
+    const error = new Error(`Not Found - ${req.originalUrl}`);
+    error.status = 404;
+    next(error); // Pass to the error-handling middleware
 });
 
-// Simple 404 handler
-app.use((req, res) => {
-    res.status(404).send('Not Found');
-});
+//Global Error-handling Middleware - must have 4 arguments (err, req, res, next)
+app.use((err, req, res, next) => {
+    console.error('--- API Error Caught ---');
+    console.error(`Path: ${req.path}`);
+    console.error(err.stack); //Log the full stack trace for debugging
+    
+    //Default to 500 if no specific status code is set on the error
+    const statusCode = err.statusCode || 500;
+    
+    res.status(statusCode).json({
+        success: false,
+        message: err.message || 'An unexpected Server error occurred.',
+        // In production, avoid sending `err.stack` for security.
+        // For development, it's very useful.
+        // stack: process.env.NODE_ENV === 'development' ? err.stack : undefined
+    });
+})
 
-// Start the Express server
+//Start the server
 app.listen(PORT, () => {
-    console.log(`Express server listening on port ${PORT}`);
-});
+    console.log(`Server running at http://localhost:${PORT}`);
+    console.log('Product API available at /api/products');
+    console.log('Press Ctrl+C to stop');
+})
