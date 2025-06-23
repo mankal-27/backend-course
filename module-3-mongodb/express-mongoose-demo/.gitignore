@@ -145,3 +145,5 @@ dist
 
 .idea
 .vscode
+
+config/config.env

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const DB_URI = process.env.DB_HOST;
+const DB_URI = process.env.MONGO_URI;
 async function connectDB(){
     try{
         await mongoose.connect(DB_URI, {
